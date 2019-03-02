@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AT Mombasa</title>
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+
+<body>
+
+    <header>
+        <h2><a href="#">AT Workshop</a></h2>
+        <nav>
+            <li><a href="#">Sms</a></li>
+            <li><a href="#">Voice</a></li>
+            <li><a href="#">Payment</a></li>
+            <li><a href="#">Airtime</a></li>
+
+        </nav>
+    </header>
+
+    <section class="main">
+        {% block content %}
+
+        {% endblock %}
+    </section>
+
+</body>
+
+</html>
