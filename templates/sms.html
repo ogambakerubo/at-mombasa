@@ -1,16 +1,30 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <h1>SMS</h1>
 
 <p>send(message: str, recipients: [str], sender_id: str = None, enqueue: bool = False): Send a message.</p>
 <br>
-<ul>
-<ol>message: SMS content. REQUIRED
-</ol>
-<ol>recipients: An array of phone numbers. REQUIRED</ol>
-<ol>sender_id: Shortcode or alphanumeric ID that is registered with your Africa's Talking account.
-</ol>
-<ol>enqueue: Set to true if you would like to deliver as many messages to the API without waiting for an acknowledgement from telcos.</ol>
-</ul>
-{% endblock  %}
+<code>
+    <ul>
+        <ol><var>message:</var> SMS content. <strong>REQUIRED</strong>
+        </ol>
+        <ol><var>recipients:</var> An array of phone numbers. <strong>REQUIRED</strong></ol>
+        <ol><var>sender_id:</var> Shortcode or alphanumeric ID that is registered with your Africa's Talking account.
+        </ol>
+        <ol><var>enqueue:</var> Set to true if you would like to deliver as many messages to the API without waiting for an acknowledgement from telcos.</ol>
+    </ul>
+</code> <br>
+<code>
+    {
+        "SMSMessageData": {
+            "Message": "Sent to 1/1 Total Cost: KES 0.8000",
+            "Recipients": [{
+                "statusCode": 101,
+                "number": "+254711XXXYYY",
+                "status": "Success",
+                "cost": "KES 0.8000",
+                "messageId": "ATPid_SampleTxnId123"
+            }]
+        }
+    }
+
+    </code> {% endblock %}
