@@ -14,12 +14,12 @@
 <body>
 
     <header>
-        <h2><a href="#">AT Workshop</a></h2>
+        <h2><a href="{{ url_for('index') }}">AT Workshop</a></h2>
         <nav>
-            <li><a href="#">Sms</a></li>
-            <li><a href="#">Voice</a></li>
-            <li><a href="#">Payment</a></li>
-            <li><a href="#">Airtime</a></li>
+            <li><a href="{{ url_for('sms') }}">Sms</a></li>
+            <li><a href="{{ url_for('voice') }}">Voice</a></li>
+            <li><a href="{{ url_for('payment') }}">Payment</a></li>
+            <li><a href="{{ url_for('airtime') }}">Airtime</a></li>
 
         </nav>
     </header>

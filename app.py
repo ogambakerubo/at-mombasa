@@ -13,6 +13,21 @@ def sms():
     return render_template('sms.html')
 
 
+@app.route('/voice')
+def voice():
+    return render_template('voice.html')
+
+
+@app.route('/payment')
+def payment():
+    return render_template('payment.html')
+
+
+@app.route('/airtime')
+def airtime():
+    return render_template('airtime.html')
+
+
 @app.route('/town/<name>')
 def town(name):
     return '<h1>I am in {}</h1>'.format(name)
