@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+<h1>AIRTIME</h1>
+
+<p>send(recipients: [dict]): Send airtime</p>
+<br>
+<code>
+    <ul>
+        <ol>recipients: Contains an array of arrays containing the following keys
+        </ol><br>
+        <ol><var>phone_number:</var> Recipient of airtime</ol>
+        <ol><var>amount:</var> Amount to send with currency e.g 100
+        </ol>
+        <ol><var>currency_code:</var> 3-digit ISO format currency code (e.g KES, USD, UGX etc).</ol>
+    </ul>
+</code> <br>
+<code>
+    <h4>RESPONSE</h4>
+    {
+        "errorMessage": "None",
+        "numSent": 1,
+        "totalAmount": "KES 1000.0000",
+        "totalDiscount": "KES 40.0000",
+        "responses": [{
+            "phoneNumber": "+254711XXXYYY",
+            "errorMessage": "None",
+            "amount": "KES 1000.0000",
+            "status": "Sent",
+            "requestId": "ATQid_1be914ac47845eef1a1dab5d89ec50ff",
+            "discount": "KES 40.0000"
+        }]
+    }
+
+    </code> {% endblock %}
