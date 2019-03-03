@@ -1,2 +1,16 @@
 {% extends 'base.html' %}
-<h1>This is SMS page</h1>
+
+{% block content %}
+<h1>SMS</h1>
+
+<p>send(message: str, recipients: [str], sender_id: str = None, enqueue: bool = False): Send a message.</p>
+<br>
+<ul>
+<ol>message: SMS content. REQUIRED
+</ol>
+<ol>recipients: An array of phone numbers. REQUIRED</ol>
+<ol>sender_id: Shortcode or alphanumeric ID that is registered with your Africa's Talking account.
+</ol>
+<ol>enqueue: Set to true if you would like to deliver as many messages to the API without waiting for an acknowledgement from telcos.</ol>
+</ul>
+{% endblock  %}
