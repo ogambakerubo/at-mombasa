@@ -1,1 +1,30 @@
-<h1>Hello world</h1>
+{% extends 'base.html' %} {% block content %}
+<h1>VOICE</h1>
+
+<p><strong>call(source: str, destination: str):</strong> Initiate a phone call</p>
+<br>
+<code>
+    <ul>
+        <ol><var>destination:</var> Phone number that you wish to dial (in international format). <strong>REQUIRED</strong>
+        </ol>
+        <ol><var>source:</var> Phone number on Africa's Talking (in international format). <strong>REQUIRED</strong></ol>
+    </ul>
+</code><br>
+
+<p><strong>(phone_number: str):</strong> Get queued calls</p>
+<br>
+<code>
+    <ul>
+        <ol><var>phone_number:</var> Phone number mapped to your Africa's Talking account (in international format). <strong>REQUIRED</strong>
+    </ul>
+</code><br>
+
+<p><strong>upload_media_file(phone_number: str, url: str):</strong> Upload voice media file</p>
+<br>
+<code>
+    <ul>
+        <ol><var>phone_number:</var> phone number mapped to your Africa's Talking account (in international format).<strong>REQUIRED</strong>
+        </ol>
+        <ol><var>url:</var> The url of the file to upload. Should start with http(s)://. <strong>REQUIRED</strong></ol>
+    </ul>
+</code> {% endblock %}
