@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+<h1>PAYMENTs</h1>
+
+<p><strong>(product_name: str, phone_number: str, currency_code: str, amount: float, metadata: dict = {}, provider_channel:str):</strong> Charge a customers mobile money account</p>
+<br>
+<code>
+    <ul>
+        <ol><var>product_name:</var> Payment product on Africa's Talking. <strong>REQUIRED</strong>
+        </ol>
+        <ol><var>phone_number:</var> Customer phone number (in international format).<strong>REQUIRED</strong></ol>
+        <ol><var>currency_code:</var> 3-digit ISO format currency code (e.g KES, USD, UGX etc). <strong>REQUIRED</strong>
+        </ol>
+        <ol><var>amount:</var> Amount to charge. <strong>REQUIRED</strong></ol>
+        <ol><var>metadata:</var> Additional data to associate with the transaction.<strong>REQUIRED</strong></ol>
+        <ol><var>provider_channel:</var> The provider channel the payment will be initiated from e.g a paybill number. <strong>OPTIONAL</strong></ol>
+    </ul>
+</code> <br>
+
+<p><strong>mobile_b2c(product_name: str, consumers: [dict]):</strong> Send mobile money to customers:</p>
+<br>
+<code>
+    <ul>
+        <ol><var>product_name:</var> Payment product on Africa's Talking. <strong>REQUIRED</strong>
+        </ol>
+        <ol><var>consumers:</var> A list of up to 10 recipients. Each recipient has:</ol>
+        <ol><var>phoneNumber:</var> Customer phone number (in international format). <strong>REQUIRED</strong>
+        </ol>
+        <ol><var>currencyCode:</var> 3-digit ISO format currency code (e.g KES, USD, UGX etc). <strong>REQUIRED</strong></ol>
+        <ol><var>amount:</var> Amount to pay. <strong>REQUIRED</strong></ol>
+        <ol><var>reason:</var> The purpose of the payment. See payments::REASON* for supported reasons. <strong>REQUIRED</strong></ol>
+        <ol><var>metadata:</var> Additional data to associate with the tranasction. <strong>REQUIRED</strong></ol>
+    </ul>
+</code> {% endblock %}
